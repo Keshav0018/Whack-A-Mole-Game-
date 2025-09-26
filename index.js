@@ -216,7 +216,7 @@ moles.forEach((mol) => {
     e.preventDefault();
 
     // If it is a bomb then
-    if (mol.src == "http://127.0.0.1:5500/bomb.png") {
+    if (mol.src.includes("bomb.png")) {
       playSound("bomb");
       setTimeout(function () {
         shakeScreen();
@@ -232,7 +232,7 @@ moles.forEach((mol) => {
         addOns.style.opacity = 0;
         sendBack(mol);
       }, 500);
-    } else if (mol.src == "http://127.0.0.1:5500/mole.png") {
+    } else if (mol.src.includes("mole.png")) {
       playSound();
 
       findAddOns();
@@ -245,7 +245,7 @@ moles.forEach((mol) => {
       }, 500);
 
       score.innerText = count;
-    } else if (mol.src == "http://127.0.0.1:5500/kingMole.png") {
+    } else if (mol.src.includes("kingMole.png")) {
       // Changing translate and scale
       let translate = mol.style.transform.split(" ")[0].slice(11, -2) * 1 + 2;
       scale = scale - 0.01;

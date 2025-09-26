@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  cursor: pointer;
+}
+
+img {
+  outline: none;
+  user-select: none;
+}
+img:focus {
+  outline: none;
+}
+
+.container {
+  width: 50vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 7.2rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 6.4rem;
+}
+
+.time {
+  text-align: end;
+  font-size: 3.2rem;
+}
+
+.game-info {
+  padding: 3.2rem;
+}
+
+.board {
+  padding-top: 1.8rem;
+  font-size: 3.2rem;
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 4.2rem;
+
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  justify-self: center;
+  background-color: #0e0e0eb8;
+  width: 8.4rem;
+  height: 8.4rem;
+  border-radius: 100px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: flex-end;
+  /* overflow-x: hidden; */
+  position: relative;
+}
+
+.mole {
+  opacity: 0;
+  width: 185%;
+  transform: translateY(30%) scale(1);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.game-details {
+  margin-left: 3.2rem;
+  padding: 4.8rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4rem;
+  font-weight: 600;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.btn-start {
+  font-size: 2.4rem;
+  padding: 1.2rem 2.8rem;
+  background-color: rgb(255, 87, 25);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+
+.btn-start:active {
+  background-color: rgb(255, 131, 86);
+}
+
+.score {
+  justify-self: end;
+  font-size: 4.2rem;
+  transition: all 0.1s ease;
+}
+
+body.shake {
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, 0);
+  }
+  40% {
+    transform: translate(10px, 0);
+  }
+  60% {
+    transform: translate(-10px, 0);
+  }
+  80% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.addOns {
+  opacity: 0;
+  transition: all ease 0.1s;
+}

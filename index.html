@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack a Mole</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+  <body>
+    <div class="container">
+      <div class="game-info">
+      <h1 class="heading">Whack a mole</h1>
+      <h2 class="time"> ⌛️: <span class="game-time">60s</span></h2>
+      </div>
+      <div class="board">
+        <div class="box box-1"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-2"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-3"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-4"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-5"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-6"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-7"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-8"><img src="./mole.png" class="mole"/></div>
+        <div class="box box-9"><img src="./mole.png" class="mole"/></div>
+      </div>
+      <div class="game-details">
+      <button class="btn-start" >Start</button>
+      <p class="score">Score 🎯: <span class="count">0</span><span class="addOns">10</span></p>
+      </div>
+    </div>
+<audio class="background-audio" src="bg.wav" loop></audio>
+    <script src="./index.js"></script>
+  </body>
+</html>
